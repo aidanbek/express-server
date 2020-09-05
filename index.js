@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3000;
 const logger = require('./helpers/logger');
 const requestLogger = require('./helpers/requestLogger');
 const compression = require('compression');
@@ -28,6 +29,6 @@ app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist/')
 app.use('/', homeRouter);
 app.use('/about', aboutRouter);
 
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+app.listen(PORT, function () {
+    console.log(`Server listening on port ${PORT}!`);
 });
