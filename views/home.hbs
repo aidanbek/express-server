@@ -1,8 +1,10 @@
 <div class="row">
     <div class="col-md-12">
-        <h1>Home</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias, corporis eaque error molestiae odio
-            officia, omnis optio quaerat quis quisquam quo quos ratione reiciendis reprehenderit sapiente suscipit
-            totam, ullam?</p>
+        <h1>Tasks</h1>
+        <div class="list-group">
+            {{#each tasks}}
+                <a href="#" class="list-group-item list-group-item-action">{{dataValues.title}}</a>
+            {{/each}}
+        </div>
     </div>
 </div>
