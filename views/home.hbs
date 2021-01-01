@@ -3,7 +3,14 @@
         <h1>Tasks</h1>
         <div class="list-group">
             {{#each tasks}}
-                <a href="#" class="list-group-item list-group-item-action">{{dataValues.title}}</a>
+                <a href="#" class="list-group-item list-group-item-action">
+                {{#if dataValues.completed}}
+                    <i class="bi bi-check-square"></i>
+                {{else}}
+                    <i class="bi bi-square"></i>
+                {{/if}}
+                {{dataValues.title}}
+                </a>
             {{/each}}
         </div>
     </div>
