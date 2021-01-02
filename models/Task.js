@@ -31,6 +31,8 @@ const Task = sequelize.define('Task', {
     createdAt: 'created_at',
     updatedAt: 'updated_at',
     freezeTableName: true,
+    paranoid: true,
+    deletedAt: 'deleted_at',
     scopes: {
         ordered: {
             order: ['title']
@@ -49,10 +51,3 @@ const Task = sequelize.define('Task', {
 });
 
 module.exports = Task;
-// (async () => {
-//     try {
-//         console.log(await Task.scope('ordered').findAll());
-//     } catch (e) {
-//         console.log(e);
-//     }
-// })()
