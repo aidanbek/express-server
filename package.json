@@ -17,7 +17,7 @@
     "express-handlebars": "^5.3.1",
     "jquery": "^3.5.1",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5",
+    "sequelize": "^6.27.0",
     "winston": "^3.3.3",
     "winston-daily-rotate-file": "^4.5.0"
   },
